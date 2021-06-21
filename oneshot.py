@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/data/hilled.pwnterm/files/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import sys
 import subprocess
@@ -418,9 +418,8 @@ class Companion():
         self.pixie_creds = PixiewpsData()
         self.connection_status = ConnectionStatus()
 
-        user_home = str(pathlib.Path.home())
-        self.sessions_dir = f'{user_home}/.OneShot/sessions/'
-        self.pixiewps_dir = f'{user_home}/.OneShot/pixiewps/'
+        self.sessions_dir = f'/data/data/hilled.pwnterm/files/usr/home/.OneShot/sessions/'
+        self.pixiewps_dir = f'/data/data/hilled.pwnterm/files/usr/home/.OneShot/pixiewps/'
         self.reports_dir = os.path.dirname(os.path.realpath(__file__)) + '/reports/'
         if not os.path.exists(self.sessions_dir):
             os.makedirs(self.sessions_dir)
@@ -1141,7 +1140,7 @@ if __name__ == '__main__':
         try:
             if not args.bssid:
                 try:
-                    with open(args.vuln_list, 'r', encoding='utf-8') as file:
+                    with open('/data/data/hilled.pwnterm/files/usr/share/oneshot/vulnwsc.txt', 'r', encoding='utf-8') as file:
                         vuln_list = file.read().splitlines()
                 except FileNotFoundError:
                     vuln_list = []
